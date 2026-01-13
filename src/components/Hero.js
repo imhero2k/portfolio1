@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaFileDownload } from 'react-icons/fa';
 import { HiArrowDown } from 'react-icons/hi';
+import profilePhoto from '../assets/profile-photo.jpeg';
 
 const Hero = () => {
   return (
@@ -75,9 +76,9 @@ const Hero = () => {
           <div className="flex-1 flex justify-center">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/10 backdrop-blur-sm border-4 border-white/20 overflow-hidden shadow-2xl">
-                <img 
-                  src="/profile-photo.jpeg" 
-                  alt="SAI SARAN K S M S" 
+                <img
+                  src={profilePhoto}
+                  alt="SAI SARAN K S M S"
                   className="w-full h-full object-cover"
                 />
               </div>

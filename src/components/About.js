@@ -1,5 +1,5 @@
 import React from 'react';
-
+import profilePhoto from '../assets/profile-photo.jpeg';
 const About = () => {
   return (
     <section id="about" className="py-20 bg-white">
@@ -13,9 +13,9 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg mb-6">
-                <img 
-                  src="/profile-photo.jpeg" 
-                  alt="SAI SARAN K S M S" 
+                <img
+                  src={profilePhoto}
+                  alt="SAI SARAN K S M S"
                   className="w-full h-full object-cover"
                 />
               </div>
