@@ -4,6 +4,21 @@ import { HiArrowDown } from 'react-icons/hi';
 import profilePhoto from '../assets/profile-photo.jpeg';
 
 const Hero = () => {
+  const resumes = [
+    {
+      label: 'Data Engineer Resume',
+      file: `${process.env.PUBLIC_URL}/resume-data-engineer.pdf`,
+    },
+    {
+      label: 'Cloud Engineer Resume',
+      file: `${process.env.PUBLIC_URL}/resume-cloud-engineer.pdf`,
+    },
+    {
+      label: 'General Resume',
+      file: `${process.env.PUBLIC_URL}/resume-general.pdf`,
+    },
+  ];
+
   return (
     <section
       id="home"
@@ -34,16 +49,23 @@ const Hero = () => {
               Specialized in building scalable data pipelines, cloud infrastructure, and data-driven solutions.
             </p>
             
+            {/* Resume Links */}
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
+              {resumes.map((resume) => (
+                <a
+                  key={resume.label}
+                  href={resume.file}
+                  download
+                  className="flex items-center gap-2 px-4 py-2 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-all transform hover:scale-105 shadow-lg text-sm"
+                >
+                  <FaFileDownload size={16} />
+                  <span>{resume.label}</span>
+                </a>
+              ))}
+            </div>
+
             {/* Social Links */}
             <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
-              <a
-                href={`${process.env.PUBLIC_URL}/resume.pdf`}
-                download="SAI_SARAN_K_S_M_S_Resume.pdf"
-                className="flex items-center gap-2 px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-all transform hover:scale-105 shadow-lg"
-              >
-                <FaFileDownload size={20} />
-                <span>Download Resume</span>
-              </a>
               <a
                 href="https://github.com/imhero2k"
                 target="_blank"

@@ -2,6 +2,21 @@ import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFileDownload } from 'react-icons/fa';
 
 const Contact = () => {
+  const resumes = [
+    {
+      label: 'Data Engineer Resume',
+      file: `${process.env.PUBLIC_URL}/resume-data-engineer.pdf`,
+    },
+    {
+      label: 'Cloud Engineer Resume',
+      file: `${process.env.PUBLIC_URL}/resume-cloud-engineer.pdf`,
+    },
+    {
+      label: 'General Resume',
+      file: `${process.env.PUBLIC_URL}/resume-general.pdf`,
+    },
+  ];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -94,14 +109,19 @@ const Contact = () => {
                   </div>
                   <p className="text-primary-100">Melbourne, Australia</p>
                 </div>
-                <a
-                  href={`${process.env.PUBLIC_URL}/resume.pdf`}
-                  download="SAI_SARAN_K_S_M_S_Resume.pdf"
-                  className="flex items-center justify-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all border border-white/20 text-white font-semibold"
-                >
-                  <FaFileDownload size={20} />
-                  <span>Download Resume</span>
-                </a>
+                <div className="grid gap-3">
+                  {resumes.map((resume) => (
+                    <a
+                      key={resume.label}
+                      href={resume.file}
+                      download
+                      className="flex items-center justify-center gap-3 p-3 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all border border-white/20 text-white font-semibold text-sm"
+                    >
+                      <FaFileDownload size={18} />
+                      <span>{resume.label}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
