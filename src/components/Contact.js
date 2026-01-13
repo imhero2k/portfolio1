@@ -45,8 +45,8 @@ const Contact = () => {
     {
       icon: <FaLinkedin size={24} />,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/ksms-saran',
-      link: 'https://linkedin.com/in/ksms-saran',
+      value: 'linkedin.com/in/ksms--saran',
+      link: 'https://www.linkedin.com/in/ksms--saran/',
     },
   ];
 
@@ -95,7 +95,7 @@ const Contact = () => {
                   <p className="text-primary-100">Melbourne, Australia</p>
                 </div>
                 <a
-                  href="/resume.pdf"
+                  href={`${process.env.PUBLIC_URL}/resume.pdf`}
                   download="SAI_SARAN_K_S_M_S_Resume.pdf"
                   className="flex items-center justify-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all border border-white/20 text-white font-semibold"
                 >

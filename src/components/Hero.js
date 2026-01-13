@@ -37,7 +37,7 @@ const Hero = () => {
             {/* Social Links */}
             <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
               <a
-                href="/resume.pdf"
+                href={`${process.env.PUBLIC_URL}/resume.pdf`}
                 download="SAI_SARAN_K_S_M_S_Resume.pdf"
                 className="flex items-center gap-2 px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-all transform hover:scale-105 shadow-lg"
               >
@@ -54,7 +54,7 @@ const Hero = () => {
                 <span>GitHub</span>
               </a>
               <a
-                href="https://linkedin.com/in/ksms-saran"
+                href="https://www.linkedin.com/in/ksms--saran/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all border border-white/20"
