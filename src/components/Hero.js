@@ -14,6 +14,10 @@ const Hero = () => {
       file: `${process.env.PUBLIC_URL}/resume-cloud-engineer.pdf`,
     },
     {
+      label: 'AI Engineer Resume',
+      file: `${process.env.PUBLIC_URL}/resume-ai-engineer.pdf`,
+    },
+    {
       label: 'General Resume',
       file: `${process.env.PUBLIC_URL}/resume-general.pdf`,
     },
