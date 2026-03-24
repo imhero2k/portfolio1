@@ -46,6 +46,7 @@ const Hero = () => {
             <div className="text-xl md:text-2xl mb-6 space-y-2">
               <p className="font-light">Data Engineer</p>
               <p className="font-light">Cloud Engineer</p>
+              <p className="font-light">AI Engineer</p>
               <p className="font-light">Data Analyst</p>
             </div>
             <p className="text-lg md:text-xl text-primary-100 mb-8 max-w-2xl">
